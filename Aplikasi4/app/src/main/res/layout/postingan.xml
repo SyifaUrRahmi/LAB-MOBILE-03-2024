@@ -1,0 +1,95 @@
+<!-- Layout utama yang mengatur tata letak XML, dengan deklarasi namespace Android -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/post"
+    android:layout_margin="10dp">
+
+    <!-- Tata letak untuk konten postingan -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <!-- Tata letak untuk header postingan -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <!-- Kartu profil -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="37.5dp">
+
+                <ImageView
+                    android:id="@+id/IV_Profile"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bowo"/>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Teks nama pengguna -->
+            <TextView
+                android:id="@+id/TV_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="55dp"
+                android:padding="10dp"
+                android:textColor="#0629EF"
+                android:textStyle="bold"
+                tools:text="Prabowo_Subianto" />
+
+            <!-- Teks nama -->
+            <TextView
+                android:id="@+id/TV_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-25dp"
+                android:layout_marginStart="55dp"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:layout_below="@+id/TV_username"
+                tools:text="Bowo" />
+
+            <!-- Tombol hapus -->
+            <ImageView
+                android:id="@+id/IV_Delete"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:src="@drawable/baseline_delete_24"
+                android:layout_toEndOf="@+id/TV_username"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="120dp"/>
+        </RelativeLayout>
+
+        <!-- Teks deskripsi postingan -->
+        <TextView
+            android:id="@+id/TV_Desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:text="Menang kalah adalah hal yang biasa, jangankan menang dan kalah Mati Pun Kami Siap. \n#Presiden Republik Indonesia ke-8"/>
+
+        <!-- Gambar postingan -->
+        <ImageView
+            android:id="@+id/IV_Postingan"
+            android:layout_width="370dp"
+            android:layout_height="270dp"
+            android:src="@drawable/bowo"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>
